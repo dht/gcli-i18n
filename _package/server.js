@@ -3,8 +3,9 @@ const cors = require("cors");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const path = require("path");
+const opn = require("opn");
 
-const startServer = (filepath, port = 4001) => {
+const startServer = (filepath, port) => {
     if (!fs.existsSync(filepath)) {
         console.log(`${filepath} does not exist`);
         process.exit(1);
@@ -40,11 +41,14 @@ const startServer = (filepath, port = 4001) => {
     );
 };
 
-const start = () => {
+const start = (port = 4001) => {
     const arg = process.argv[2] || "./data.json";
     const filepath = path.resolve(arg);
-    startServer(filepath, 4001);
+    startServer(filepath, port);
+    opn(`http://localhost:${port}/`, { app: ["google chrome"] });
 };
+
+start();
 
 module.exports = {
     start: start

@@ -4,7 +4,7 @@ import "./App.css";
 const domain = _path => `http://localhost:4001${_path}`;
 
 const getData = () => {
-    return fetch(domain("/")).then(response => response.json());
+    return fetch(domain("/get")).then(response => response.json());
 };
 
 const saveData = data => {
@@ -27,6 +27,8 @@ class App extends Component {
 
     componentDidMount() {
         getData().then(data => {
+            console.log("data ->", data);
+
             this.setState({ data: JSON.stringify(data, null, 4) });
         });
     }
