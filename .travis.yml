@@ -1,0 +1,20 @@
+  language: node_js
+  warnings_are_errors: false
+  node_js:
+  - '9'
+  before_script:
+  - export CI=false
+  cache:
+    yarn: true
+    directories:
+      - node_modules
+  before_deploy:
+    - yarn build
+  deploy:
+    skip_cleanup: true
+    provider: firebase
+    token:
+      secure: VqHF/yJEFU9zYE+jEyP5GdLgn9XYfyC2iezxXQtOCSaT4LhXozpd7U4t/w0q330WrbiZo8Ydpq1dtNhkfWlTEUImYHjRhfLlekBEbkmu8XrbJNenmAcdv4S8tRYmnhtkZML0J736XWSOOCIOYGvTRLpNoPb0HFBk2hlzlpqoMEi5bvXZk/D+6cSovQXBpagJOYr2eGQgXicqTddIhfixzi/+m1fVSqQXbP8WhZfqxQOnuZBY3Lfyr2ES4+pnUeNsb2xknQ99RyYo9mZ7B5Vpyje8DQxQbnsP7GEVcZGFxrzbs0BbRbW3yjfFFG78j6MLIDqRmgBOBguWjOpSx2vZMq4kIDc0CVnfztj1cZFXEX8gbPNTCwBfJR++Z1xW3VXszfqPo71psUi/7EmwIoHmILQ2IoVs1yrmNuuJMr8xx8hChlhuRHsr00Kh+fzXZmjAJCD7rVXqgj4virNhVATZYmzfKz4TRkQM/Hy8Z2Y4y/x/ijDN/tCzfQHhyc+02NxThpxiXs1psCiAdK0vZCzgZp2wA+xXnT7NMh/eIBIt6XC0DItHkZflZ7DOJloXLbthDlk+9kLYqD+8Yjm9LBS/hmzUiBp7ppK7RTa3izc00iYrZ9GhiCB6dQiieDhDdB+9AzO1UA/2cHbTtwZOKs92GX8kN7BU5t3bhv3/afGDn/8=
+  env:
+    global:
+    - secure: VqHF/yJEFU9zYE+jEyP5GdLgn9XYfyC2iezxXQtOCSaT4LhXozpd7U4t/w0q330WrbiZo8Ydpq1dtNhkfWlTEUImYHjRhfLlekBEbkmu8XrbJNenmAcdv4S8tRYmnhtkZML0J736XWSOOCIOYGvTRLpNoPb0HFBk2hlzlpqoMEi5bvXZk/D+6cSovQXBpagJOYr2eGQgXicqTddIhfixzi/+m1fVSqQXbP8WhZfqxQOnuZBY3Lfyr2ES4+pnUeNsb2xknQ99RyYo9mZ7B5Vpyje8DQxQbnsP7GEVcZGFxrzbs0BbRbW3yjfFFG78j6MLIDqRmgBOBguWjOpSx2vZMq4kIDc0CVnfztj1cZFXEX8gbPNTCwBfJR++Z1xW3VXszfqPo71psUi/7EmwIoHmILQ2IoVs1yrmNuuJMr8xx8hChlhuRHsr00Kh+fzXZmjAJCD7rVXqgj4virNhVATZYmzfKz4TRkQM/Hy8Z2Y4y/x/ijDN/tCzfQHhyc+02NxThpxiXs1psCiAdK0vZCzgZp2wA+xXnT7NMh/eIBIt6XC0DItHkZflZ7DOJloXLbthDlk+9kLYqD+8Yjm9LBS/hmzUiBp7ppK7RTa3izc00iYrZ9GhiCB6dQiieDhDdB+9AzO1UA/2cHbTtwZOKs92GX8kN7BU5t3bhv3/afGDn/8=

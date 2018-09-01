@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+'use strict';
+
+const path = require('path');
+const args = process.argv.slice(2);
+const main = require('../server');
+
+
+(async () => {
+    main.start();
+})();

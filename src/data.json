@@ -1,0 +1,40 @@
+{
+    "languages": {
+        "en": {
+            "title": "English"
+        },
+        "he": {
+            "title": "Hebrew"
+        },
+        "de": {
+            "title": "German"
+        },
+        "nl": {
+            "title": "Dutch"
+        }
+    },
+    "translations": {
+        "en": {
+            "welcome": "Welcome"
+        },
+        "he": {
+            "welcome": "Welcome"
+        },
+        "de": {
+            "welcome": "Welcome"
+        },
+        "nl": {
+            "welcome": "Welcome"
+        }
+    },
+    "translateWithGoogle": {
+        "en": {},
+        "he": {
+            "welcome": true
+        },
+        "de": {
+            "welcome": true
+        },
+        "nl": {}
+    }
+}
